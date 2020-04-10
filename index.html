@@ -1,0 +1,66 @@
+<html>
+<head>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .starburst {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    background: #E73289;
+  }
+  .starburst .outer {
+    width: 200vw;
+    height: 100%;
+    position: relative;
+    animation: rotate infinite linear 2s;
+  }
+  .starburst .ray {
+    width: 0;
+    height: 0;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-width: 10vw 100vw;
+    border-color: transparent #E12485;
+    border-style: solid;
+    margin: -10vw -100vw;
+  }
+  .starburst .ray:nth-child(1) { transform:rotate(20deg); }
+  .starburst .ray:nth-child(2) { transform:rotate(40deg); }
+  .starburst .ray:nth-child(3) { transform:rotate(60deg); }
+  .starburst .ray:nth-child(4) { transform:rotate(80deg); }
+  .starburst .ray:nth-child(5) { transform:rotate(100deg); }
+  .starburst .ray:nth-child(6) { transform:rotate(120deg); }
+  .starburst .ray:nth-child(7) { transform:rotate(140deg); }
+  .starburst .ray:nth-child(8) { transform:rotate(160deg); }
+  .starburst .ray:nth-child(9) { transform:rotate(180deg); }
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(20deg); }
+  }
+</style>
+</head>
+<body>
+<div class="starburst">
+  <div class="outer">
+    <span class="ray" />
+    <span class="ray" />
+    <span class="ray" />
+    <span class="ray" />
+    <span class="ray" />
+    <span class="ray" />
+    <span class="ray" />
+    <span class="ray" />
+    <span class="ray" />
+    <span class="ray" />
+  </div>
+</div>
+</body> 
+</html>
